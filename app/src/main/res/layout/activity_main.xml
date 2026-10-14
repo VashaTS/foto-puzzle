@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp" android:fitsSystemWindows="true">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Foto Puzzle"
+        android:textAppearance="?attr/textAppearanceHeadlineMedium" android:layout_gravity="center_horizontal"/>
+    <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/difficulty" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="8dp" app:singleSelection="true" app:selectionRequired="true" app:checkedButton="@+id/d3">
+        <Button android:id="@+id/d3" style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3×3"/>
+        <Button android:id="@+id/d4" style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4×4"/>
+        <Button android:id="@+id/d5" style="?attr/materialButtonOutlinedStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5×5"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+        <Button android:id="@+id/btnGallery" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Galeria" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btnCamera" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Aparat"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+        <TextView android:id="@+id/moves" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Ruchy: 0" android:textAppearance="?attr/textAppearanceTitleMedium"/>
+        <TextView android:id="@+id/timer" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="end" android:text="Czas: 00:00" android:textAppearance="?attr/textAppearanceTitleMedium"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp">
+        <pl.fotopuzzle.PuzzleView android:id="@+id/puzzle" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TextView android:id="@+id/hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"
+            android:gravity="center" android:padding="24dp" android:text="Wybierz zdjęcie z galerii lub zrób nowe aparatem,\na następnie układaj kafelki.\n\nZamieniaj kafelki stukając w dwa po kolei\nlub przeciągając jeden na drugi." android:textAppearance="?attr/textAppearanceBodyLarge"/>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+        <Button android:id="@+id/btnPreview" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Podgląd" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btnShuffle" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Nowa gra"/>
+    </LinearLayout>
+</LinearLayout>
